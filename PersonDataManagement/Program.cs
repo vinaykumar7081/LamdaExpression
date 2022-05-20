@@ -9,13 +9,16 @@ public class Program
         bool check = true;
         while (check)
         { 
-        Console.WriteLine(" Adding the Data  in The List 1\n");
+        Console.WriteLine(" Adding the Data  in The List 1\n Age Less Than 60 Years 2\n");
             Console.WriteLine("###############Enter the Above option to Excute the Use Cases################");
             int option =Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
                 case 1:
                     person.AddPerson();
+                    break;
+                case 2:
+                    person.GetTopRecords();
                     break;
                 case 0:
                     break;
