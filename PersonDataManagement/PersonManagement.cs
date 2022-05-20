@@ -30,5 +30,10 @@ namespace PersonDataManagement
                 Console.WriteLine(person.SSN + " " + person.Name + " " + person.Address + " " + person.Age);
             }
         }
+        public void AverageAge()
+        {
+            var result = this.list.Average(x => x.Age);
+            Console.WriteLine("Average Age is :->"+result);
+        }
     }
 }
