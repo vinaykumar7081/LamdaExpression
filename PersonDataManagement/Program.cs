@@ -9,7 +9,7 @@ public class Program
         bool check = true;
         while (check)
         { 
-        Console.WriteLine(" Adding the Data  in The List 1\n Age Less Than 60 Years 2\n Display Average Age 3\n Display The Age Between the Ranse 4\nn Display the Specific Name 5\n");
+        Console.WriteLine(" Adding the Data  in The List 1\n Age Less Than 60 Years 2\n Display Average Age 3\n Display The Age Between the Ranse 4\nn Display the Specific Name 5\n Skip the Data from the List 6\n");
             Console.WriteLine("###############Enter the Above option to Excute the Use Cases################");
             int option =Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -28,6 +28,9 @@ public class Program
                     break;
                 case 5:
                     person.FindName();
+                    break;
+                case 6:
+                    person.SkipRecord();
                     break;
                 case 0:
                     check = false;
