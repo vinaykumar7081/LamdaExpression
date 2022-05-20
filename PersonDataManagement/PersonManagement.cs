@@ -45,10 +45,10 @@ namespace PersonDataManagement
                 }
             }
         }
-        public void FindSpecificName()
+        public void FindName()
         {
-            var result = this.list.Where(x => x.Name == "Ajay");
-            Display(result);
+            var value = this.list.Where(x => x.Name == "Vijay");
+            Display(value);
         }
     }
 }
