@@ -16,7 +16,7 @@ namespace PersonDataManagement
             list.Add(new Person { SSN = 103, Name = "Aman", Address = "Basti", Age = 80 });
             list.Add(new Person { SSN = 104, Name = "Anish", Address = "GorakhPur", Age = 40 });
             list.Add(new Person { SSN = 105, Name = "Suraj", Address = "Noida", Age = 15 });
-            list.Add(new Person { SSN = 106, Name = "Anurag", Address = "Gaziyabad", Age = 55 });
+            list.Add(new Person { SSN = 106, Name = "Anurag", Address = "Gaziyabad", Age = 16 });
         }
         public void GetTopRecords()
         {
@@ -34,6 +34,21 @@ namespace PersonDataManagement
         {
             var result = this.list.Average(x => x.Age);
             Console.WriteLine("Average Age is :->"+result);
+        }
+        public void GetTopRecordBetweenRange()
+        {
+            foreach (var record in this.list)
+            {
+                if (record.Age < 18 && record.Age > 13)
+                {
+                    Console.WriteLine(record.Age);
+                }
+            }
+        }
+        public void FindSpecificName()
+        {
+            var result = this.list.Where(x => x.Name == "Ajay");
+            Display(result);
         }
     }
 }
